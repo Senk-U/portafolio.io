@@ -1,0 +1,187 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+   background-color: #eaeaea;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #007acc, #005f9e);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Secciones */
+section {
+  padding: 5rem 2rem 3rem; /* más espacio arriba */
+  max-width: 1000px;
+  margin: 3rem auto;
+  position: relative;
+  z-index: 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Sobre mí */
+#sobre-mi p,
+#formacion p,
+#contacto p,
+#sobre-mi ul {
+  margin-bottom: 1rem;
+}
+
+#sobre-mi ul {
+  list-style: disc inside;
+}
+
+/* Experiencia */
+#experiencia h3 {
+  margin-top: 2rem;
+  color: #007acc;
+}
+
+#experiencia ul {
+  margin-top: 1rem;
+  list-style: circle inside;
+}
+
+/* Proyectos */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h4 {
+  margin-bottom: 0.5rem;
+  color: #007acc;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+}
+
+/* Contacto */
+#contacto ul {
+  margin-top: 1rem;
+  list-style: square inside;
+}
+
+#contacto strong {
+  color: #007acc;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+section.active-section {
+  background-color: #fff;
+  border: 2px solid #007acc;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
