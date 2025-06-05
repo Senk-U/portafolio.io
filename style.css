@@ -8,33 +8,32 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-   background-color: #eaeaea;
+  background-color: #eaeaea;
   color: #333;
   line-height: 1.6;
 }
 
-/* Navbar */
+/* Navbar - Adaptado para Bootstrap */
 .navbar {
   background-color: #121212;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
+.navbar .logo {
   font-size: 1.6rem;
   font-weight: bold;
+  color: white;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -42,6 +41,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem;
 }
 
 .nav-links a:hover {
@@ -55,11 +55,10 @@ body {
   padding: 6rem 2rem;
   text-align: center;
   min-height: 60vh;
-  display: flex;
+  display: none; /* Changed from flex!important */
   flex-direction: column;
   justify-content: center;
 }
-
 
 .hero h2 {
   font-size: 2.5rem;
@@ -68,48 +67,65 @@ body {
 
 /* Secciones */
 section {
-  padding: 5rem 2rem 3rem; /* más espacio arriba */
+  padding: 5rem 2rem 3rem;
   max-width: 1000px;
   margin: 3rem auto;
   position: relative;
-  z-index: 0;
+  display: none; /* Asegura que todas estén ocultas por defecto */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Active sections */
+section.active-section {
+  display: block;
+  border: 2px solid #007acc;
+}
+
+/* Special case for hero when active */
+.hero.active-section {
+  display: flex !important; /* Only use important here */
 }
 
 section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-/* Sobre mí */
-#sobre-mi p,
-#formacion p,
-#contacto p,
-#sobre-mi ul {
-  margin-bottom: 1rem;
-}
-
-#sobre-mi ul {
-  list-style: disc inside;
-}
-
-/* Experiencia */
-#experiencia h3 {
-  margin-top: 2rem;
   color: #007acc;
 }
 
+/* Contenido común */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+#sobre-mi ul {
+  list-style-type: disc;
+}
+
 #experiencia ul {
-  margin-top: 1rem;
-  list-style: circle inside;
+  list-style-type: circle;
+}
+
+#contacto ul {
+  list-style-type: square;
 }
 
 /* Proyectos */
 .project-container {
+  min-height: 300px; /* Evita que el contenedor colapse cuando está vacío */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+.alert {
+  background-color: #8f7d44;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
 }
 
 .project-card {
@@ -119,6 +135,9 @@ section h2 {
   padding: 1.2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .project-card:hover {
@@ -132,16 +151,22 @@ section h2 {
 
 .project-card p {
   font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Contacto */
-#contacto ul {
+.project-card a {
+  display: inline-block;
   margin-top: 1rem;
-  list-style: square inside;
+  color: #fff;
+  background-color: #007acc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-#contacto strong {
-  color: #007acc;
+.project-card a:hover {
+  background-color: #005f9e;
 }
 
 /* Footer */
@@ -153,35 +178,48 @@ footer {
   margin-top: 3rem;
 }
 
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Retrasos animación */
+.project-card.delay-0 { animation-delay: 0.1s; }
+.project-card.delay-1 { animation-delay: 0.2s; }
+.project-card.delay-2 { animation-delay: 0.3s; }
+.project-card.delay-3 { animation-delay: 0.4s; }
+.project-card.delay-4 { animation-delay: 0.5s; }
+
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-links {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.5rem;
+    padding-top: 1rem;
   }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+  
+  .hero {
+    padding: 4rem 1rem;
+    min-height: 50vh;
   }
-
+  
   .hero h2 {
     font-size: 2rem;
   }
-
+  
+  section {
+    padding: 3rem 1rem;
+    margin: 1.5rem auto;
+  }
+  
   .project-container {
     grid-template-columns: 1fr;
   }
-
 }
-
-section.active-section {
-  background-color: #fff;
-  border: 2px solid #007acc;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
-  transition: all 0.3s ease-in-out;
-  z-index: 1;
-}
-

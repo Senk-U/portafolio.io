@@ -1,0 +1,21 @@
+
+[
+  {
+    "titulo": "Libros API - CRUD con Node.js y Express",
+    "descripcion": "API RESTful para gestión de libros desarrollada con Node.js y Express.",
+    "tecnologias": ["Node.js", "Express", "JavaScript", "API REST"],
+    "link": "https://github.com/Senk-U/API-libros.git"
+  },
+  {
+    "titulo": "Portafolio Personal",
+    "descripcion": "Portafolio profesional desarrollado con HTML, CSS y JavaScript.",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    "link": "https://github.com/Senk-U/portafolio.git"
+  },
+  {
+    "titulo": "Sistema Gubernamental",
+    "descripcion": "Colaboración en proyecto internacional para sistema educativo.",
+    "tecnologias": ["JavaScript", "Testing", "Documentación"],
+    "link": "#"
+  }
+]

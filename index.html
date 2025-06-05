@@ -11,18 +11,29 @@
 </head>
 <body>
 <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4">
+  <div class="container-fluid">
     <h1 class="logo">Gerardo Daniel Ventura</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#inicio"  class="active-section">Inicio</a></li>
-        <li><a href="#sobre-mi"  class="active-section">Sobre mí</a></li>
-        <li><a href="#experiencia"  class="active-section">Experiencia</a></li>
-        <li><a href="#formacion"  class="active-section">Formación</a></li>
-        <li><a href="#proyectos"  class="active-section">Proyectos</a></li>
-        <li><a href="#contacto"  class="active-section">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+          <li><a href="#formacion" class="nav-link">Formación</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+  <!-- Botón del toggle para móviles -->
+  
+<!-- Solo esta sección debe estar visible inicialmente -->
+
 
   <main>
     <!-- Inicio -->
@@ -37,7 +48,7 @@
     </section>
 
     <!-- Sobre mí -->
-    <section id="sobre-mi"  class="active-section">
+    <section id="sobre-mi" >
       <h2>Sobre mí</h2>
       <p>Soy un profesional 
         proactivo con +1 años de experiencia 
@@ -59,7 +70,7 @@
     </section>
 
     <!-- Experiencia -->
- <section id="experiencia" class="active-section">
+ <section id="experiencia" >
   <h2>Experiencia Profesional</h2>
 
   <h3>🔧 Soporte Técnico</h3>
@@ -83,9 +94,10 @@
   <h3>🌍 Proyecto Internacional</h3>
   <ul>
     <li><strong>Intellbits - Enuma 2025 (Enero - Abril):</strong> 
-        Colaboración en proyecto con empresa coreana para implementación de sistema gubernamental (CAPRES). 
-        Monitoreo de funcionalidades, ejecución de pruebas técnicas, reporte de bugs y documentación 
-        de procesos. Trabajo coordinado con equipo internacional.
+        Colaboración en proyecto con empresa coreana para implementación de sistema gubernamental para el inisterio de educacion. 
+        Monitoreo de funcionalidad del sistema, reporte de bugs y documentación 
+        de procesos. 
+        Trabajo coordinado con equipo internacional.
     </li>
   </ul>
 
@@ -108,10 +120,11 @@
       Mantenimiento de sitios WordPress y soporte en migración de contenidos.
     </li>
   </ul>
-</section>
+   </section>
+
 
     <!-- Formación -->
-    <section id="formacion" class="active-section">
+    <section id="formacion" >
       <h2>Formación y Certificaciones</h2>
       <p><strong>Licenciatura en Sistemas Informáticos</strong><br>UFG - En curso (4o año)</p>
       <p><strong>Bachillerato General</strong><br>Colegio Joya de Cerén</p>
@@ -119,7 +132,7 @@
     </section>
 
     <!-- Proyectos -->
-    <section id="proyectos" class="active-section">
+    <section id="proyectos">
       <h2>Proyectos</h2>
       <div class="project-container" id="project-list">
         <!-- Se cargarán dinámicamente con JS -->
@@ -127,7 +140,7 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="active-section">
+    <section id="contacto">
       <h2>Contacto</h2>
       <p><strong>Email:</strong> ia.danielfuentes@ufg.edu.sv</p>
       <p><strong>Teléfono:</strong> 6459-2104</p>
@@ -137,7 +150,7 @@
         <li>Marcelo Magaña – Enuma | +82 10-7221-7318</li>
         <li>Jessica Rachel Aguilar – Telenetwork | 7239-8571</li>
       </ul>
-    </section>
+   </section>
   </main>
 
   <footer>
