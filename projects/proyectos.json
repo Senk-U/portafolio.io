@@ -17,5 +17,31 @@
     "descripcion": "Colaboración en proyecto internacional para sistema educativo.",
     "tecnologias": ["JavaScript", "Testing", "Documentación"],
     "link": "#"
-  }
+  },
+  {
+    "titulo": "Conversor de Imágenes a Word con OCR",
+    "descripcion": "Aplicación desktop que convierte imágenes a documentos Word, extrayendo texto mediante reconocimiento óptico de caracteres (Tesseract OCR). Incluye interfaz gráfica y soporte para múltiples formatos de imagen.",
+    "tecnologias": [
+      "Python",
+      "Tesseract OCR",
+      "PyInstaller",
+      "tkinter",
+      "python-docx",
+      "Pillow"
+  ],
+  "link": "https://github.com/Senk-U/archivos_OCR/tree/main",
+  "caracteristicas": [
+    "Interfaz gráfica intuitiva",
+    "Soporte para formatos PNG/JPG/JPEG",
+    "Extracción de texto con Tesseract OCR",
+    "Generación de documentos Word estructurados",
+    "Configuración de idioma (español)",
+    "Empaquetado como ejecutable independiente"
+  ],
+  "requisitos": [
+    "Python 3.8+",
+    "Tesseract OCR 5.0+",
+    "Archivo de idioma spa.traineddata"
+  ]
+}
 ]
